@@ -1,0 +1,16 @@
+{
+  "name": "fundamentosnodejs",
+  "version": "1.0.0",
+  "description": "fundamentos y practicas de nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "rafael-mrd_clg",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.5.0"
+  }
+}
