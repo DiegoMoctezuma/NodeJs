@@ -1,13 +1,8 @@
 const express = require("express");
+const { leerUrl, agregarUrl } = require("../controllers/homeController");
 const router = express.Router();
 
-router.get("/", (req, res) => {
-	const urls = [
-		{ origin: "www.google.com/elpepe", shortURL: "afewsdwefa1" },
-		{ origin: "www.google.com/skrillex", shortURL: "afewsdwefa2" },
-		{ origin: "www.google.com/topogigo", shortURL: "afewsdwefa3" },
-	];
-	res.render("home", { urls: urls });
-});
+router.get("/", leerUrl);
+router.post("/", agregarUrl);
 
 module.exports = router;
