@@ -1,5 +1,8 @@
 const express = require("express");
 const { create } = require("express-handlebars");
+require("dotenv").config();
+require("./database/db");
+
 const app = express();
 
 const hbs = create({
