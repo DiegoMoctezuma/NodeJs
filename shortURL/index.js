@@ -1,8 +1,6 @@
 const express = require("express");
 const { create } = require("express-handlebars");
-
 const app = express();
-const port = 3000;
 
 const hbs = create({
 	extname: ".hbs",
@@ -17,4 +15,5 @@ app.use(express.static(__dirname + "/public"));
 app.use("/", require("./routes/home"));
 app.use("/auth", require("./routes/auth"));
 
-app.listen(port, () => console.log("Servidor funcionando 😎👍"));
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => console.log(`Servidor funcionando 😎👍 ${PORT}`));
